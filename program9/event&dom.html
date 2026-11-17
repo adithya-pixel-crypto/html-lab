@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>DOM and EVENT Handiling </title>
+        <script>
+            function changeBackground(){
+                const randomnumber= Math.floor(Math.random()*200);
+                const randomnumber2= Math.floor(Math.random()*200);
+                const randomnumber3= Math.floor(Math.random()*200);
+
+                document.body.style.backgroundColor =`rgb(${randomnumber}, ${randomnumber2}, ${randomnumber3})`;
+
+            }
+            function changeText(){
+                document.getElementById("message").innerHTML = "Mouse is over the text";
+            }
+            function restoreText(){
+                  document.getElementById("message").innerHTML = "move the Mouse  over this text";
+            }
+            function changeimage(){
+                document.getElementById("collegeimage").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhDd85cEf1b1JTwsVZ6FCHXbBNnyn1xkHv9BIGmypi9A&s=10"
+            }
+            function restoreimage(){
+                document.getElementById("collegeimage").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKLC-pkW1KEogoh1yEC9FjHbBkVtpkg9oUU70FAHWpQ&s=10"
+            }
+        </script>0
+        
+    </head>
+    <body>
+        <h1>DOM and Eventhandiling</h1>
+        <button onclick="changeBackground()">Change Background </button>
+
+        <br><br>
+        <h2 id="message"
+        onmouseover="changeText()"
+        onmouseout="restoreText()">  Move the mouse over this text
+</h2>
+<img id="collegeimage"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKLC-pkW1KEogoh1yEC9FjHbBkVtpkg9oUU70FAHWpQ&s=10"
+width="300"
+onmouseover="changeimage()"
+onmouseout="restoreimage()">
+    </body>
+</html>
